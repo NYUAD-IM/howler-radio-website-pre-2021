@@ -1,0 +1,145 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <title>Howler Radio</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Holwer Radio - web radio broadcasting from the desert." />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <!-- STYLESHEETS -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="css/main/base.css" type="text/css" rel="stylesheet" />
+    <link href="css/main/chat.css" type="text/css" rel="stylesheet" />
+    <link href="css/main/announcements.css" type="text/css" rel="stylesheet" />
+    <link href="css/main/slideshow.css" type="text/css" rel="stylesheet" />
+
+    <!-- LIBRARIES -->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/three.js"></script>
+    <script type="text/javascript" src="./js/tween.min.js"></script>
+    <script type="text/javascript" src="./js/ease.min.js"></script>
+
+
+    <!-- VISUALIZER SCRIPTS -->
+    <script type="text/javascript" src="./js/visualizer.js"></script>
+
+    <!-- CHAT SCRIPTS -->
+    <script type="text/javascript" src="./js/socket.io.js"></script>
+    <script rel="text/javascript" src="./js/chat.js"></script>
+    <script rel="text/javascript" src="./js/now_playing.js"></script>
+    <script rel="text/javascript" src="./js/slideshow.js"></script>
+  </head>
+
+  <body onload="initSlideshow()">
+    <header>
+      <a href="index.html">
+        <div id="logo_container">
+          <!-- <img src="img/howler_radio_sign.png"> -->
+        </div>
+      </a>
+      <audio id="audio-player" src="http://14123.live.streamtheworld.com/SAM10AAC091_SC" controls></audio>
+      <div id="links_container">
+        <span id="play-pause" onclick="toggleAudio()"></span>
+
+        <span id="links_justify">
+          <a onclick="window.open('popup.html', '', 'width=200, height=200')" class="header_link">PLAYER</a>
+          <a href="shows.html" class="header_link" target="_blank" >SHOWS</a>
+          <a href="schedule.html" class="header_link" target="_blank">SCHEDULE</a>
+          <a href="https://www.mixcloud.com/Howler_Radio/" class="header_link" target="_blank">ARCHIVE</a>
+          <button onclick="toggleVisualizer()" id="toggleVisualizer">VISUAL</button>
+        </span>
+      </div>
+      <img id="play-img" src="img/play_marble.png" onclick="toggleAudio()">
+    </header>
+    <main>
+      <div id="container">
+
+        <!-- BANNER -->
+        <div id="banner">
+
+          <!-- NOW PLAYING -->
+          <div id="now_playing"><span id="pulsate">ON AIR</span>MUSIC FROM THE CLOUD</div>
+
+          <!-- ANNOUNCEMENTS -->
+          <div id="announcement">
+		          <a href="http://radio.nyuad.im/dj" target="_blank">JOIN US!</a>
+          </div>
+        </div>
+
+
+        <!-- SLIDESHOW -->
+        <div id="slideshow">
+          <div class="slideshow_image" id="slideshow_holder_a">
+          </div>
+          <div class="slideshow_image" id="slideshow_holder_b">
+          </div>
+          <div id="legend">
+            <div id="heh"><a id="legend_name" href="" target="_blank">HOWLER RADIO</a></div>
+            <div id="legend_dj">WEB RADIO FROM THE DESERT</div>
+            <div id="legend_day">EVERY DAY</div>
+            <div id="legend_time">ALL DAY</div>
+          </div>
+        </div>
+
+        <!-- CHAT -->
+        <div id="whole_chat">
+            <span class="chat_legend chat_title">chat</span><span class="chat_users" id="connected_users">(0)</span><br>
+      
+        
+          <div id="chat_window">
+            <!-- <button id="join_button" onclick="showChat()">join</button> -->
+          </div>
+          <br>
+          <input class="chat_input" type="text" id="username" placeholder="who you are" disabled></input><br><br />
+          <br>
+          <input class="chat_input" type="text" id="message" placeholder="what you say" disabled></input><br>
+          <button id="send_button" onclick="sendMessage()" disabled>send</button>
+
+        </div>
+        <br>
+
+
+        <!-- ABOUT -->
+        <div id="about">
+          <!-- Student-run radio broadcasting from the desert-<br> -->
+          student run radio broadcasting from the desert -<br>
+          music, talks and experiments -<br>
+          tune in, drop out -
+          <a href="https://www.facebook.com/howlerradio/">find us here</a>
+        </div><br>
+      </div>
+      <div id="footer">Sponsored by the <a id="im" href="http://nyuad.im">Interactive Media Program</a> at NYUAD</div>
+
+      <script>
+      function detectmob() {
+       if( navigator.userAgent.match(/Android/i)
+       || navigator.userAgent.match(/webOS/i)
+       || navigator.userAgent.match(/iPhone/i)
+       || navigator.userAgent.match(/iPad/i)
+       || navigator.userAgent.match(/iPod/i)
+       || navigator.userAgent.match(/BlackBerry/i)
+       || navigator.userAgent.match(/Windows Phone/i)
+       ){
+          document.getElementById("audio-player").style.visibility = 'visible';
+          document.getElementById("audio-player").style.display = 'block';
+        }
+       else {
+
+        }
+      }
+      setTimeout(detectmob, 1000);
+
+      //Set audio to mut
+      var audioPlayer = document.getElementById("audio-player");
+      audioPlayer.muted = true;
+
+      </script>
+    </main>
+  </body>
+</html>

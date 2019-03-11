@@ -1,0 +1,274 @@
+/*---------------------------------------------*/
+/*---------------------GENERAL-----------------*/
+/*---------------------------------------------*/
+
+table{
+  width: 100%;
+}
+
+hr{
+  border: 1px solid rgb(245, 245, 245);
+}
+
+main{
+  position: relative;
+}
+
+#show_list{
+ width: 100%;
+}
+
+/*---------------------------------------------*/
+/* ---------------- SHOWS LIST ---------------- */
+/*---------------------------------------------*/
+.show_item{
+	float: left;
+  padding: 5px 5px;
+  margin: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  border: 2px solid rgb(45, 45, 45);
+  background-color: rgb(25, 25, 25);
+
+  transition: border-color 0.1s ease-in-out;
+  -webkit-transition: border-color 0.1s ease-in-out;
+  -moz-transition: border-color 0.1s ease-in-out;
+}
+
+.show_item:hover{
+  border: 2px solid rgb(15, 15, 15);
+}
+
+.show_transparent{
+  opacity: 1;
+
+  transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+}
+
+hr{
+  float: left;
+  width: 100%;
+}
+
+#not-selected{
+  color: white;
+  background-color: rgb(25, 25, 25);
+}
+
+
+#selected{
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  color: black;
+}
+
+
+/*---------------------------------------------*/
+/*---------------------CONTAINER---------------*/
+/*---------------------------------------------*/
+
+#container{
+  position: absolute;
+  top: 88px;
+}
+
+#now_playing{
+  left: 4%;
+}
+
+#show_container{
+  visibility: hidden;
+  float: left;
+  width: 100%;
+  overflow: visible;
+  height: 50%;
+}
+
+#image_holder{
+  float: left;
+  width: 50%;
+  margin-top: 2%;
+  border-right: 2px solid rgb(245, 245, 245);
+  border-left: 2px solid rgb(245, 245, 245);
+
+  padding: 10px;
+}
+
+#show_image{
+  float: right;
+  height: 300px;
+  width: 100%;
+
+  background-position: center;
+  background-image:url('../img/howler_radio_logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#show_info{
+  color: rgb(245, 245, 245);
+  text-align: left;
+  margin-top: 2%;
+  margin-left: 4%;
+  padding-right: 4%;
+  margin-bottom: 2%;
+  width: 46%;
+  float: left;
+  border-right: 2px solid rgb(245, 245, 245);
+}
+
+#show_title{
+ float: left;
+ height: 12%;
+ width: 100%;
+ font-size: 2em;
+ text-decoration: underline;
+ margin-bottom: 1%;
+
+ color: black;
+ background-color: rgb(245, 245, 245);
+ padding: 2px;
+}
+
+#show_dj{
+  float: left;
+  height: 10%;
+  width: 100%;
+  margin-top: 2%;
+}
+
+#show_tags{
+  float: left;
+  height: 15%;
+  width: 100%;
+  font-size: 0.9em;
+  font-style: italic;
+  overflow: auto;
+  color: rgb(180, 180, 180);
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#show_description{
+  float: left;
+  text-align: justify;
+  overflow: auto;
+  margin-bottom: 4%;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+#show_time{
+  position: relative;
+  float: left;
+  text-align: right;
+  height: 10%;
+  width: 50%;
+}
+
+#show_archive{
+  position: relative;
+  float: left;
+  height: 10%;
+  width: 50%;
+}
+
+#show_archive a{
+  font-size: 1em;
+  color: rgb(245, 245, 245);
+}
+
+#show_archive a:hover{
+  background-color: rgb(15, 15, 15);
+  text-decoration: line-through;
+}
+
+
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait) {
+  table{
+    font-size: 0.5em;
+    margin: 0;
+  }
+
+  div{
+    margin: 0;
+  }
+
+  header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 75px;
+  }
+
+  body{
+    width: 100%;
+    margin: 0;
+  }
+
+  main{
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    margin-top: 80px;
+  }
+
+  #links_container{
+    margin: 0;
+  }
+
+  #play-pause{
+    float: left;
+  }
+
+  #shows{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  #image_holder{
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-left-width: 0px;
+    border-right-width: 0px;
+  }
+
+  #now_playing{
+    width: 92%;
+  }
+
+  #show_image{
+    margin: 0;
+    width: 100%;
+    height: 230px
+  }
+
+  #show_tags{
+    height: 15%;
+  }
+
+  #show_info{
+    float: left;
+    border: 1px #efefef solid;
+    padding: 4%;
+    width: 90%;
+    font-size: 0.7em;
+    border-width: 0px;
+  }
+
+
+  /*DO NOT SHOW ANNOUNCEMENTS*/
+  #announcement{
+    display: none;
+  }
+}

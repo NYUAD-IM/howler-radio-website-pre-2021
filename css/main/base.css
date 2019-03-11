@@ -1,0 +1,293 @@
+/*---------------------------------------------*/
+/*---------------------GENERAL-----------------*/
+/*---------------------------------------------*/
+
+body {
+  font-family: 'Source Sans Pro', serif;
+  background-color: rgb(15, 15, 15);
+}
+
+body::-webkit-scrollbar {
+  background-color: rgb(15, 15, 15);
+}
+
+audio{
+  background-color: rgb(15, 15, 15);
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgb(15, 15, 15);
+  text-align: center;
+  height: 75px;
+  color: #DAAD4F;
+  overflow: hidden;
+  z-index: 2;
+  border-bottom: 2px solid rgba(245, 245, 245, 0.9);
+}
+
+h1 {
+  font-size: 2.2em;
+  margin: 0 0 20px;
+  text-shadow: 0 1px #333;
+}
+
+p {
+  color: #666;
+  font-size: 0.8em;
+  margin: 15px 0;
+}
+
+a{
+  margin: auto;
+  color: #000000;
+
+  transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+}
+
+a:hover{
+  background-color: rgb(15, 15, 15);
+  color: white;
+}
+
+hr{
+  border: 0.5px solid rgb(100, 100, 100);
+}
+
+/*---------------------------------------------*/
+/*---------------------HEADER------------------*/
+/*---------------------------------------------*/
+
+.header_link{
+  cursor: pointer;
+}
+
+#logo_container{
+  position: absolute;
+  background-image: url('./../../img/howler_logo_small_transparent.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  margin-left: 4%;
+  float: left;
+  height: 100%;
+  max-width: 45%;
+  width: 45%;
+  bottom: 0;
+}
+
+#audio-player{
+  display: none;
+  visibility: hidden;
+}
+
+#play-img{
+  position: absolute;
+  right: 4%;
+  top: 5px;
+  width: 13%;
+  max-width: 65px;
+  height: 65px;
+}
+
+#links_container{
+  position: relative;
+  left: 32%;
+  float: left;
+  width: 35%;
+  height: 100%;
+  margin-left: 10%;
+  padding-bottom: 0%;
+}
+
+#links_container a{
+  padding-right: 5px;
+  padding-left: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+#links_container a:hover{
+  background-color: white;
+  color: #000000;
+  /*text-decoration: line-through;*/
+}
+
+#links_justify{
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 580px) and (orientation : portrait) {
+
+ #links_justify{
+   font-size: 1.1em;
+   display: inline;
+   margin: 0;
+ }
+
+ #logo_container{
+   left: 1%;
+   width: 27%;
+ }
+
+ #play-img{
+   position: absolute;
+   right: 5%;
+   top: 5px;
+   width: 13%;
+   max-width: 25px;
+   height: 35px;
+ }
+}
+
+
+/*----------------------------------------------------*/
+/*---------------------CONTAINER----------------------*/
+/*----------------------------------------------------*/
+
+main {
+  margin-top: 85px;
+  width: 100%;
+  text-align: center;
+}
+
+#container{
+  width: 92%;
+  height: auto;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+#about{
+  background-color: rgb(15, 15, 15);
+  color: white;
+  line-height: 1.5;
+  float: left;
+  text-align: justify;
+  margin-top: 5%;
+  margin-left: 0;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-right: 4%;
+  width: 100%;
+  height: auto;
+}
+
+#about a{
+  border-right-width: 2px;
+  color: black;
+  background-color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 1em;
+  float: right;
+  text-align: right;
+  text-decoration: none;
+}
+
+#about a:hover{
+  color: white;
+  background-color: rgb(15, 15, 15);
+}
+
+#footer {
+  color: rgb(145, 145, 145);
+  float: left;
+  width: 100%;
+  height: auto;
+  margin-top: 2%;
+  padding: 1%;
+  font-size: 0.8em;
+}
+
+#footer a{
+  color: rgb(105, 105, 105);
+}
+
+#footer a:hover{
+  color: white;
+}
+
+#im{
+  font-size: 1em;
+}
+
+/*----------------------------------------------------*/
+/*---------------------VISUALIZER---------------------*/
+/*----------------------------------------------------*/
+
+canvas{
+  position: absolute;
+  top: 75px;
+  left: 0px;
+}
+
+#toggleVisualizer{
+  font-family: 'Source Sans Pro', serif;
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 1em;
+}
+
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait) {
+  header{
+    margin: 0;
+  }
+
+  #about{
+    margin-top: 4%;
+    font-size: 0.75em;
+  }
+
+  #toggleVisualizer{
+    font-size: 0.8em;
+  }
+
+  #footer{
+    color: white
+    position: static;
+    bottom: 1px;
+    font-size: 0.5em;
+    margin-top: 10%;
+    width: 100%;;
+  }
+
+  h1 {
+    font-size: 4em;
+    text-shadow: 0 3px #666;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  a {
+    font-size: 0.8em;
+    width: 125px;
+  }
+
+  iframe {
+    width: 70%;
+  }
+
+  audio{
+    visibility: visible;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+  }
+}

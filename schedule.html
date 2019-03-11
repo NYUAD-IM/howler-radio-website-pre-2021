@@ -1,0 +1,77 @@
+<html>
+
+  <head>
+
+    <!--<title>Jackal Radio</title>-->
+    <title>Schedule - Howler Radio</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Jackal Radio: The Howler" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="css/main/base.css" type="text/css" rel="stylesheet" />
+    <link href="css/main/announcements.css" type="text/css" rel="stylesheet" />
+    <link href="css/schedule.css" type="text/css" rel="stylesheet" />
+
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.jplayer.min.js"></script>
+
+    <script type="text/javascript" src="./js/socket.io.js"></script>
+    <script rel="text/javascript" src="./js/now_playing.js"></script>
+
+  </head>
+
+  <body onload="toggleAudio()">
+    <header>
+      <a href="index.html"><div id="logo_container">
+      </div></a>
+      <audio id="audio-player" src="http://samcloud.spacial.com/api/listen?sid=74729&rid=131758&f=mp3,any&br=64000,any&m=sc" preload="auto" controls autoplay></audio>
+      <div id="links_container">
+        <span id="links_justify">
+          <a onclick="window.open('popup.html', '', 'width=200, height=200')" class="header_link">PLAYER</a><a href="shows.html" class="header_link">SHOWS</a><a>SCHEDULE</a><a href="https://www.mixcloud.com/Howler_Radio/" class="header_link">ARCHIVE</a>
+        </span>
+      </div>
+      <img id="play-img" src="img/play_marble.png" onclick="toggleAudio()">
+    </header>
+    <main>
+      <!-- BANNER -->
+      <div id="banner">
+
+        <!-- NOW PLAYING -->
+        <div id="now_playing"><span id="pulsate">ON AIR</span>MUSIC FROM THE CLOUD</div>
+
+        <!-- ANNOUNCEMENTS -->
+        <div id="announcement">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScD1yZGMAW0GuVPfoKtUs2ZA6g-aiZVWJgHhaNquVV2tRqRGg/viewform" target="_blank">WANT A RADIO SHOW?</a>
+        </div>
+      </div>
+
+      <!--- CONTAINER --->
+      <div id="container">
+        <div id="schedule">
+        </div>
+        <div id="footer">Sponsored by the <a id="im" href="http://nyuad.im">Interactive Media Program</a> at NYUAD</div>
+      </div>
+
+      <script>
+      function toggleAudio(){
+        var player = document.getElementById("audio-player");
+        var button = document.getElementById("play-img");
+
+        if(player.muted){
+          player.muted = false;
+          button.setAttribute('src', 'img/pause_marble.png');
+        }else if(!player.muted){
+          player.muted = true;
+          button.setAttribute('src', 'img/play_marble.png');
+        }
+
+      }
+      </script>
+    </main>
+  </body>
+</html>

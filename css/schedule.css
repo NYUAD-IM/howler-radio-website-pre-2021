@@ -1,0 +1,44 @@
+main{
+  position: relative;
+}
+
+#container{
+  position: absolute;
+  top: 50px;
+}
+
+#now_playing{
+  left: 4%;
+}
+
+#schedule{
+  /*border: 2px solid white;*/
+  position: relative;
+  top: 30px;
+  background-image: url('../img/show_schedule.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+
+  width: 80%;
+  height: 450px;
+  margin-left: 10%;
+}
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait) {
+  #schedule{
+    top: 55px;
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  /*DO NOT SHOW ANNOUNCEMENTS*/
+  #announcement{
+    display: none;
+  }
+
+  #now_playing{
+    padding: 1%;
+    width: 90%;
+  }
+}

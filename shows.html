@@ -1,0 +1,111 @@
+<html>
+
+<head>
+
+  <!--<title>Jackal Radio</title>-->
+  <title>Shows - Howler Radio</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Jackal Radio: The Howler" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link href="css/reset.css" type="text/css" rel="stylesheet" />
+  <link href="css/main/base.css" type="text/css" rel="stylesheet" />
+  <link href="css/main/announcements.css" type="text/css" rel="stylesheet" />
+  <link href="css/shows.css" type="text/css" rel="stylesheet" />
+
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.jplayer.min.js"></script>
+
+  <!-- CHAT SCRIPTS -->
+  <script type="text/javascript" src="./js/socket.io.js"></script>
+  <script rel="text/javascript" src="./js/shows_interface.js"></script>
+  <script rel="text/javascript" src="./js/now_playing.js"></script>
+</head>
+
+<body onload="init()">
+  <header>
+    <a href="index.html"><div id="logo_container">
+    </div></a>
+    <audio id="audio-player" src="http://samcloud.spacial.com/api/listen?sid=74729&rid=131758&f=mp3,any&br=64000,any&m=sc" preload="auto" controls hidden></audio>
+    <div id="links_container">
+      <span id="links_justify">
+        <a onclick="window.open('popup.html', '', 'width=200, height=200')" class="header_link">PLAYER</a><a>SHOWS</a><a href="schedule.html"class="header_link">SCHEDULE</a>
+        <a href="https://www.mixcloud.com/Howler_Radio/" class="header_link">ARCHIVE</a>
+      </span>
+    </div>
+    <img id="play-img" src="img/play_marble.png" onclick="toggleAudio()">
+  </header>
+  <main>
+    <!-- BANNER -->
+    <div id="banner">
+
+      <!-- NOW PLAYING -->
+      <div id="now_playing"><span id="pulsate">ON AIR</span>MUSIC FROM THE CLOUD</div>
+
+      <!-- ANNOUNCEMENTS -->
+      <div id="announcement">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScD1yZGMAW0GuVPfoKtUs2ZA6g-aiZVWJgHhaNquVV2tRqRGg/viewform" target="_blank">WANT A RADIO SHOW?</a>
+      </div>
+    </div>
+
+    <!-- CONTAINER -->
+    <div id="container">
+      <hr>
+      <!-- ALL SHOWS -->
+      <div id="show_list">
+      </div>
+      <hr>
+      <!-- SINGLE SHOW -->
+      <div id="show_container">
+        <div id="image_holder">
+          <div id="show_image" class="show_transparent"></div>
+        </div>
+        <div id="show_info">
+          <div id="show_title" class="show_transparent">
+            title
+          </div>
+          <div id="show_dj" class="show_transparent">
+            host
+          </div>
+          <div id="show_tags" class="show_transparent">
+            tags, tags
+          </div>
+          <div id="show_description" class="show_transparent">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <div id="show_archive" class="show_transparent">
+            <a id="show_archive_link" href="http://www.google.com">PAST SHOWS</a>
+          </div>
+          <div id="show_time" class="show_transparent">
+            that time
+          </div>
+        </div>
+        <div id="footer">Sponsored by the <a id="im" href="http://nyuad.im">Interactive Media Program</a> at NYUAD</div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+
+
+  <script>
+  function toggleAudio(){
+    var player = document.getElementById("audio-player");
+    var button = document.getElementById("play-img");
+
+    if(player.muted){
+      player.muted = false;
+      button.setAttribute('src', 'img/pause_marble.png');
+    }else if(!player.muted){
+      player.muted = true;
+      button.setAttribute('src', 'img/play_marble.png');
+    }
+  }
+  </script>
+</main>
+</body>
+</html>

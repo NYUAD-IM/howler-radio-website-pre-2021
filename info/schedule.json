@@ -1,0 +1,121 @@
+{
+  "shows":[
+    {
+      "name": "Sadboi Radio",
+      "image": "sadboi",
+      "dj": "OCVNS",
+      "tags": ["edm","hip=hop", "futurebass", "ambient"],
+      "description": "turn up and tear up with a weekly dose of california's favorite edm and hip-hop slaps. tune in to escape the world for a little bit with a playlist guaranteed to break your heart, but heal it too.",
+      "time": "FRIDAY - 23:00 - 0:00",
+      "archive": "http://www.mixcloud.com/Howler_Radio"
+    },
+    {
+      "name": "Research Paper Radio",
+      "image": "research_paper_radio",
+      "dj": "bryan waterman",
+      "tags": ["freeform", "constraint-based", "20th-century", "21st-century", "recorded sound", "nerdy", "popular", "unpopular"],
+      "description": "Research Paper Radio contains multitudes: from 1920s showtunes and Dada sound collage to 1980s synthpop and international new wave to 2016's new indie releases, sometimes in a single set. Tracks occasionally played in alphabetical order. Never the same show twice.<br><br><u>Disclaimer:</u> No actual research papers have been harmed or even discussed in the making of this show, but the music's so good you might find yourself itching to write about it.",
+      "time": "SUNDAY - 22:00 - 00:00",
+      "archive": "http://www.mixcloud.com/Howler_Radio"
+    },
+    {
+      "name": "alternative hour",
+      "image": "alternativehour",
+      "dj": "yesmemez",
+      "tags": ["alternative","rock", "indie", "experimental"],
+      "description": " alternate from reality with music you wish you've heard before",
+      "time": "TUESDAY - 20:00 - 21:00",
+      "archive": "http://www.mixcloud.com/Howler_Radio"
+    },
+    {
+      "name": "what's haneping?",
+      "image": "whats_haneping",
+      "dj": "dj flowers",
+      "tags": ["original pinoy music", "tagalog", "fresh jamz", "sometimes in english"],
+      "description": "The stereotype that Filipinos can sing, but taken to its extreme. 100% Filipino music, 100% DJ Flowers super excited to share it with you. Come for weekly (somewhat) themed shows and some tidbits of the Filipino music scene, stay for the inspiration to check out your own local music scene.",
+      "time": "MONDAY - 20:00 - 22:00",
+      "archive": "http://mixcloud.com/whats_haneping"
+    },
+    {
+      "name": "regular expressions",
+      "image": "regular_expressions",
+      "dj": "période",
+      "tags": ["various","memory", "experimental", "ambient"],
+      "description": "a weekly broadcast of human music by machine voices.\n\ntune in for an algorithmically curated selection of songs for imaginary spaces, from oscillating ambient textures to thumping acid house -straight from the cloud.",
+      "time": "TUESDAY - 21:00 - 23:00",
+      "archive": "http://mixcloud.com/periode"
+    },
+    {
+      "name": "On Another Note",
+      "image": "on_another_note",
+      "dj": "max & finn",
+      "tags": ["disco","eurotrash", "anthropology", "knowledge"],
+      "description": "Why did Disco music die? How did the Eurovision Song Contest pave the way for the European Union? What’s the beef between Taylor Swift and Katy Perry? Every week, over-ambitious and under-qualified part-time ethnomusicologists Max & Finn spend an hour dissecting the music of an individual genre or decade, playing songs you probably haven’t heard before, but definitely should have!",
+      "time": "TUESDAY - 23:00 - 00:00",
+      "archive": "http://mixcloud.com/Howler_Radio"
+    },
+    {
+      "name": "red light music",
+      "image": "red_light_music",
+      "dj": "people machine",
+      "tags": ["electronic", "club", "experimental", "strobe"],
+      "description": "Red light music is a bi-weekly exploration/curation of electronic-based music. Each episode's mix is guided by a different musical or personal theme, but all are united by sexy synths, seedy basslines, and stroboscopic intensity. This is music to love and hate to, cook or make love to, grind or gently touch to, and always move to.",
+      "time": "WEDNESDAY - 22:00 - 00:00",
+      "archive": "https://www.mixcloud.com/dancingwithdionysus/"
+    },
+    {
+      "name": "Brown Town",
+      "image": "brown_town",
+      "dj": "",
+      "tags": ["indian","pakistan", "subcontinent", "medley"],
+      "description": "Ever wondered what the point of Hookah Bar even is? Want to serenade a south asian beauty but dont know the right words to say? Join us as we give you the best and worst from the subcontinent, with nothing from the middle.",
+      "time": "FRIDAY - 18:00 - 20:00",
+      "archive": "http://www.mixcloud.com/Howler_Radio"
+    },
+    {
+      "name": "Bentertainment Radio",
+      "image": "bentertainment_radio",
+      "dj": "ben",
+      "tags": ["v a p o r","城市", "talk", "win XP"],
+      "description": "The spiritual successor to Ben’s high school vlog (which died in infamy), Bentertainment centers around weekly themed episodes and music, a vaporwave aesthetic, group conversations, and other assorted rambling.",
+      "time": "THURSDAY - 21:00 - 22:00",
+      "archive": "http://www.mixcloud.com/Howler_Radio"
+    },
+    {
+      "name": "Afro Radio",
+      "image": "afro_radio",
+      "dj": "",
+      "tags": ["afro","world"],
+      "description": "A one-hour weekly show, theme-oriented with little (optional) reportages on Africa-related issues, a panel of guests once in a while and with Afro music from all genres and from all corners of the world.",
+      "time": "SATURDAY - 20:00 - 21:00",
+      "archive": "http://www.mixcloud.com/Howler_Radio"
+    },
+    {
+      "name": "right from the ruh",
+      "image": "right_from_the_ruh",
+      "dj": "DJ Bikash",
+      "tags": [""],
+      "description": "Music with no boundaries. Soulful songs of different genres - cultures - languages - countries and times. Flavor of NYUAD with spices coming from the whole world. Music that would lead you to your own self … would let you meandre around the endless void inside you and fill it with peace … rediscover you … rejuvenate you. Music that will start right from your ruh (soul) and end right there to complete the full cycle of life, love and melody with DJ-Bikash.",
+      "time": "MONDAY - 20:00 - 21:00",
+      "archive": ""
+    },
+    {
+      "name": "metal 101",
+      "image": "metal_101",
+      "dj": "adnan and majed",
+      "tags": [""],
+      "description": "",
+      "time": "WEDNESDAY - 19:00 - 20:00",
+      "archive": ""
+    },
+    {
+      "name": "italodance",
+      "image": "italodance",
+      "dj": "andrea",
+      "tags": [""],
+      "description": "Italodance is a genre of Eurodance music that reached its peak of fame in the late 90’s early 2000’s. Italo dance is characterized by synthesizer-riffs, vocals modified with vocoders with catchy and simple choruses and typically a bass with a 'metallic' sound often referred to as \"Tuba -Bass\". Yes...you are right….I just picked up a definition from wikipedia. You know why? Because for me Italodance is simply music that makes me wanna dance and have fun. So whether you are in your dorm, or in the gym, or even out of campus, and you feel like letting loose and have some fun, tune in and enjoy!",
+      "time": "TUESDAY - 19:00 - 20:00",
+      "archive": ""
+    }
+  ]
+}
